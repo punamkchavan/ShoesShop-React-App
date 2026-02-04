@@ -2,48 +2,73 @@ import './AvailableShoes.css';
 import Card from '../UI/Card';
 import ShoesItem from './ShoesItem/ShoesItem';
 
-const DummyShoes=[
-     {
-    id: 'm1',
-    name: 'Paplate Thali',
-    description: 'Finest fish and Bhakri with solkadi',
-    price: 250,
+const DummyShoes=[{
+    id: 's1',
+    name: 'Nike Air Max',
+    description: 'Lightweight running shoes with air cushioning',
+    price: 5999,
+    sizes: {
+      6: true,
+      7: true,
+      8: false,
+      9: true,
+    },
   },
   {
-    id: 'm2',
-    name: 'Ukadiche Modak',
-    description: 'Kokan Special sweet dumplings',
-    price: 50,
+    id: 's2',
+    name: 'Adidas Ultraboost',
+    description: 'Comfortable shoes for daily training and running',
+    price: 7499,
+    sizes: {
+      6: false,
+      7: true,
+      8: true,
+      9: true,
+    },
   },
   {
-    id: 'm3',
-    name: 'Kolambi Vade',
-    description: 'fluffy rice-lentil bread',
-    price: 300,
+    id: 's3',
+    name: 'Puma Casual Sneakers',
+    description: 'Stylish sneakers for everyday wear',
+    price: 4299,
+    sizes: {
+      6: true,
+      7: true,
+      8: true,
+      9: false,
+    },
   },
   {
-    id: 'm4',
-    name: 'Phansachi Bhaji',
-    description: 'A spicy curry made from tender jackfruit',
-    price: 80,
+    id: 's4',
+    name: 'Reebok Sports Shoes',
+    description: 'Durable shoes suitable for gym and sports',
+    price: 3899,
+    sizes: {
+      6: true,
+      7: false,
+      8: true,
+      9: true,
+    },
   },
-]
+];
 
 export default function AvailableShoes(){
-    const mealList = DummyShoes.map((meal) => (
+    const shoesList = DummyShoes.map((shoes) => (
     <ShoesItem 
-    key={meal.id} 
-    id={meal.id}
-    name={meal.name}
-    description={meal.description}
-    price={meal.price}
+    key={shoes.id} 
+    id={shoes.id}
+    name={shoes.name}
+    description={shoes.description}
+    price={shoes.price}
+    sizes={shoes.sizes}
+    
     />
   ));
     return(
         <>
         <section className='shoes'>
         <Card>
-        <ul>{mealList}</ul>
+        <ul>{shoesList}</ul>
         </Card>
         </section>
         </>
