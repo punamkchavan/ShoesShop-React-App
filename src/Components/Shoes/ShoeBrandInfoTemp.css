@@ -1,0 +1,50 @@
+.hero {
+  min-height: 110vh;
+  display: flex;
+  align-items: center;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  background-color: white;
+  gap: 0.5rem;
+}
+.summary {
+  text-align: center;
+  max-width: 40rem;
+  width: 100%;
+  color:black;
+  background-color: white;
+  border-radius: 14px;
+  padding: 3rem 2.5rem;   
+  box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+}
+
+.summary h2 {
+  font-size: 2rem;
+  margin-top: 0;
+  font-weight: bolder;
+}
+
+.price-row {
+  display: flex;
+  align-items: center;        
+  justify-content: space-between; 
+}
+
+.price-row h3 {
+  margin: 0;
+  font-weight: bolder;     
+  font-size: 3vh;             
+}
+
+.price-row button {
+  padding: 6px 16px;
+  border-radius: 6px;
+  border: none;
+  background-color: #ff7a00;
+  color: white;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.75);
+  font-weight: bolder;
+  font-size: 2vh;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25) ;
+}
