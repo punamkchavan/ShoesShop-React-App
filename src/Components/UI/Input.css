@@ -17,3 +17,27 @@
   font: inherit;
   padding-left: 0.5rem;
 }
+
+@media (max-width: 600px) {
+  .input {
+    justify-content: space-between;
+  }
+
+  .input label {
+    font-size: 0.9rem;
+  }
+
+  .input input {
+    width: 4rem;
+    padding: 0.45rem 0.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .input {
+    justify-content: flex-start;
+  }
+
+  .input input {
+    width: 3.5rem;
+  }
+}

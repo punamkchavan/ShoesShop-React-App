@@ -31,6 +31,7 @@
   border-radius: 25px;
   margin-left: 1rem;
   font-weight: bold;
+  font-size: small;
 }
 
 .button:hover .badge,
@@ -38,24 +39,22 @@
   background-color: #92320c;
 }
 
-/* .bump {
-  animation: bump 300ms ease-out;
-} */
+@media (max-width: 600px) {
+  .button {
+    width: 80%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+  }
 
-/* @keyframes bump {
-  0% {
-    transform: scale(1);
+  .badge {
+    margin-left: auto;
   }
-  10% {
-    transform: scale(0.9);
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 0.75rem 2.5rem;
+    font-size: 1rem;
   }
-  30% {
-    transform: scale(1.1);
-  }
-  50% {
-    transform: scale(1.15);
-  }
-  100% {
-    transform: scale(1);
-  }
-} */
+}
+

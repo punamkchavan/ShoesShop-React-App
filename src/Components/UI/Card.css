@@ -6,3 +6,16 @@
   background-color:white;
   color:rgb(12, 11, 11);
 }
+
+@media (max-width: 600px) {
+  .card {
+    padding: 0.75rem;
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .card {
+    padding: 1.25rem;
+  }
+}

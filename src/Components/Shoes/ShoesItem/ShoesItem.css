@@ -38,3 +38,27 @@
   color: white;
   border-color: #fb9127;
 }
+
+@media (min-width: 768px) {
+  .meal {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .meal h3 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .sizes {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

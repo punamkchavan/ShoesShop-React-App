@@ -70,3 +70,24 @@
   background-color: #8a2b06;
   color: white;
 }
+
+@media (min-width: 768px) {
+  .cart-item {
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .summary {
+    width: 10rem;
+    justify-content: space-between;
+  }
+
+  .actions {
+    flex-direction: row;
+    margin-top: 0;
+  }
+
+  .cart-item h2 {
+    font-size: 1.25rem;
+  }
+}

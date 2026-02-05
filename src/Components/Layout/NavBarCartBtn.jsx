@@ -20,8 +20,14 @@ export default function NavBarCartBtn(props){
             <span className='icon'>
                 <CartIcon />
             </span>
-            <span className='font-bold font-serif text-outline'>My Cart</span>
-            <span className='badge bg-gradient-to-br from-orange-700 via-purple-1000 to-indigo-700'>{numberOfCartItems}</span>
+            <span className='font-serif font-bold text-outline
+                             text-lg sm:text-xl md:text-2xl lg:text-3xl'
+                             >My Cart</span>
+            <span className='badge bg-gradient-to-br from-orange-700 via-purple-900 to-indigo-700
+                             text-xs sm:text-sm md:text-base
+                             px-2 sm:px-3 md:px-4
+                             py-0.5 sm:py-1
+                             rounded-full'>{numberOfCartItems}</span>
         </button>
         </>
     )

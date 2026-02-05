@@ -17,34 +17,85 @@
   padding: 3rem 2.5rem;   
   box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
 }
+.image-wrapper {
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
-.summary h2 {
+.image-box {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-box  h2 {
   font-size: 2rem;
   margin-top: 0;
   font-weight: bolder;
 }
-
 .price-row {
   display: flex;
-  align-items: center;        
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 0.75rem;
 }
 
 .price-row h3 {
-  margin: 0;
-  font-weight: bolder;     
-  font-size: 3vh;             
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
 .price-row button {
-  padding: 6px 16px;
-  border-radius: 6px;
+  padding: 0.5rem 1.25rem;
+  border-radius: 8px;
   border: none;
   background-color: #ff7a00;
   color: white;
-  text-shadow: 0 2px 6px rgba(0,0,0,0.75);
-  font-weight: bolder;
-  font-size: 2vh;
+  font-weight: bold;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25) ;
+}
+
+.price-row button:hover {
+  background-color: #e66a00;
+}
+
+@media (max-width: 480px) {
+  .hero{
+    padding: 3rem;
+    padding-left: 0;
+    overflow-x: auto;
+    padding: 1rem;
+    scroll-behavior: smooth;
+  }
+  .main-box {
+    padding: 0.75rem;
+  }
+
+  .main-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .price-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .price-row button {
+    width: 100%;
+    text-align: center;
+  }
 }
