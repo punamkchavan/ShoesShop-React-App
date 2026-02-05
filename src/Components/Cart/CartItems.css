@@ -17,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap:1.2rem;
 }
 
 .price {
@@ -25,7 +26,6 @@
 }
 
 .amount {
-  font-weight: bold;
   border: 1px solid #ccc;
   padding: 0.25rem 0.75rem;
   border-radius: 6px;
@@ -35,6 +35,13 @@
 .actions {
   display: flex;
   flex-direction: column;
+}
+.size {
+  font-weight: bold;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  color: #363636;
 }
 
 @media (min-width: 768px) {

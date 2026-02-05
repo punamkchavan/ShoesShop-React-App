@@ -7,9 +7,9 @@ import shoe4 from '../../assets/shoes4.jpg';
 export default function ShoeBrandInfoTemp(){
     return(
         <>
-        <div className='hero bg-gradient-to-br from-orange-500 via-purple-900 to-indigo-1000'>
+        <div className='hero'>
 
-            <section className='summary'>
+            <section className='main-box'>
                 <div className="w-full h-52 bg-white rounded-2xl shadow-lg p-4">
                         <img src={shoe1} 
                         alt="Shoe"
@@ -24,7 +24,7 @@ export default function ShoeBrandInfoTemp(){
                 </div>
             </section>
 
-            <section className='summary'>
+            <section className='main-box'>
                 <div className="w-full h-52 bg-white rounded-2xl shadow-lg p-4">
                         <img
                             src={shoe2}
@@ -40,7 +40,7 @@ export default function ShoeBrandInfoTemp(){
                 </div>
             </section>
 
-            <section className='summary'>
+            <section className='main-box'>
                 <div className="w-full h-52 bg-white rounded-2xl shadow-lg p-4">
                         <img
                             src={shoe3}
@@ -56,7 +56,7 @@ export default function ShoeBrandInfoTemp(){
                 </div>
             </section>
 
-            <section className='summary'>
+            <section className='main-box'>
                 <div className="w-full h-52 bg-white rounded-2xl shadow-lg p-4">
                         <img
                             src={shoe4}

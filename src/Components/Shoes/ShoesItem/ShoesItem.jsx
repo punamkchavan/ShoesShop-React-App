@@ -1,8 +1,29 @@
 import './ShoesItem.css';
-
+import ShoesItemForm from './ShoesItemForm';
+import { useContext, useState } from 'react';
+import CartContext from '../../../Context/cart-context';
 export default function ShoesItem(props){
 
+     const cartCtx = useContext(CartContext);
+
+     const [selectedSize, setSelectedSize] = useState(null);
+
      const price = `Rs. ${props.price.toFixed(2)}`;
+
+     const addToCartHandler = amount => {
+
+      if (!selectedSize) {
+      alert('Please select a size');
+      return;
+      }
+            cartCtx.addItem({
+            id: props.id,
+            name: props.name,
+            amount: amount,
+            price: props.price,
+            size: selectedSize,
+            });
+        };
 
     return(
         <>
@@ -13,13 +34,21 @@ export default function ShoesItem(props){
             <div className='price'>{price}</div>
             <div className='price'>size</div>
             <div>
-                 {Object.entries(props.sizes).map(([size]) => (
-                       <button  className='sizes' key={size}>{size}</button>
-                  ))}
+                 {Object.entries(props.sizes)
+            .filter(([_, isAvailable]) => isAvailable)
+            .map(([size]) => (
+              <button
+                key={size}
+                className={`sizes ${selectedSize === size ? 'active' : ''}`}
+                onClick={() => setSelectedSize(size)}
+              >
+                {size}
+              </button>
+            ))}
             </div>
             </div>
             <div>
-                {/* <MealsItemForm onAddToCart={addToCartHandler} /> */}
+             <ShoesItemForm onAddToCart={addToCartHandler} />
             </div>
         </li>
         </>

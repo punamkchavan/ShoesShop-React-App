@@ -33,6 +33,7 @@ const cartReducer = (state, action) => {
       totalAmount: updatedTotalAmount,
     };
   }
+
   if (action.type === 'REMOVE') {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
@@ -59,7 +60,7 @@ const cartReducer = (state, action) => {
 
 export default function CartProvider(props){
 
-        const [cartState, dispatchCartAction] = useReducer(
+    const [cartState, dispatchCartAction] = useReducer(
         cartReducer,
         defaultCartState
     );
