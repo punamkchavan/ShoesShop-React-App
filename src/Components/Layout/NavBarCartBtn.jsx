@@ -20,8 +20,7 @@ export default function NavBarCartBtn(props){
             <span className='icon'>
                 <CartIcon />
             </span>
-            <span className='font-serif font-bold text-outline
-                             text-lg sm:text-xl md:text-2xl lg:text-3xl'
+            <span className='font-serif font-bold text-outline'
                              >My Cart</span>
             <span className='badge bg-gradient-to-br from-orange-700 via-purple-900 to-indigo-700
                              text-xs sm:text-sm md:text-base
